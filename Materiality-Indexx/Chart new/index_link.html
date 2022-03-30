@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Survey</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/jquery.range2dslider.css">
+	<script type="text/javascript" src="js/jquery.range2dslider.js"></script>
+    
+</head>
+<body>
+	<div class="page-content">
+		<div class="wizard-heading">Survey Form</div>
+		<div class="wizard-v6-content">
+			<div class="wizard-form">
+		        <form class="form-register" id="form-register" action="#" method="post">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            
+			            
+						<!-- SECTION 2 -->
+			            
+			            <section>
+			                <div class="inner">
+			                	<div class="form-heading">
+			                		<h4>Let's Survey</h4>
+			                		<span>2/3</span>
+			                	</div>
+		                		
+								<div>
+	
+								<input id="first_name" name="first_name2" >
+								<input id="slider">
+								<script>
+								
+								$('#slider').range2DSlider({
+									grid:true,
+									axis:[[0,2,4,6,8,10],[0,2,4,6,8,10]],
+									projections:true,
+									showLegend:[1,1],
+									allowAxisMove:['both'],
+									printLabel:function( val ){
+										this.projections&&this.projections[0].find('.xdsoft_projection_value_x').text(val[1].toFixed(5));
+										return val[0].toFixed(5);
+									}
+								})
+									.range2DSlider('value',[[9,0],[9,1],[9,2],[9,3],[9,4],[9,5],[9,6],[9,7],[9,8],[9,9]]);
+								
+								
+								</script>
+	
+	<div>
+		<button onclick="capture()"> Capture </button>
+	</div>
+	<div>
+		<img src="" alt="" id="result">
+	</div>
+	<script>
+		function capture(){
+			console.log($('#slider').attr('value'));
+		}
+	</script>
+
+							</div>
+			            </section>
+			            <!-- SECTION 3 -->
+			            
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+
+</body>
+</html>

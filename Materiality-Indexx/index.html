@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Survey</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+    
+    <script type="text/javascript" src="js/jquery.js"></script>
+	<link rel="stylesheet" href="css/jquery.range2dslider.css">
+	<script type="text/javascript" src="Chart new/js/jquery.range2dslider.js"></script>
+	
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
+	<!-- datepicker -->
+	
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+    
+   
+    <style>
+    	h3 {text-align: center;}
+		body,html{
+			margin:0px;
+			padding:5px;
+		}
+		
+		body>div{
+			margin:0px 20px;
+			padding:20px;
+			background:rgba(184, 184, 184, 0.1);
+		}
+
+
+	</style>
+</head>
+<body>
+
+	
+
+	<!--<img src="C:\Users\58027\Documents\Front End\template 2\colorlib-wizard-26\images\back2.png" class= "right" width = "550px" height="100px">-->
+		<img src="images\back6.png" width="60px" height="50px" />
+	<div class="page-content">
+		<div class="wizard-heading">Materiality Survey 2022</div>
+
+		<div class="wizard-v6-content">
+			<div class="wizard-form">
+		        <form class="form-register" id="form-register" action="https://script.google.com/macros/s/AKfycbwGBZBVrH8JlHv18VM6EhZfEJ5r5kOXZk8hNzJQfB_PXfrunhyo1TyAGOHfJPbA3AtInQ/exec" method="POST">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h3>
+			            	<span class="step-text">Personal Information</span>
+			            </h3>
+			            <section>
+			                <div class="inner">
+			                	<div class="form-heading">
+			                		
+			                	</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="first_name" name="First Name" required>
+											<span class="label">First Name</span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="last_name" name="Last Name" required>
+											<span class="label">Last Name</span>
+										</label>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="phone" name="Employee Code" required>
+											<span class="label">Employee Code</span>
+										</label>
+									</div>
+									<div class="form-holder">
+										<label class="form-row-inner">
+											<input type="text" name="E-mail" id="your_email_1" class="form-control"  required>
+											<span class="label">E-Mail</span>
+										</label>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<label class="form-row-inner">
+											<input type="text" class="form-control" id="address" name="Office" required>
+											<span class="label">Office</span>
+										</label>
+									</div>
+								</div>
+							</div>
+			            </section>
+			            <!-- SECTION 2 -->
+			            <h3>
+			            	<span class="step-text">Materiality Matrix </span>
+			            </h3>
+			            <section>
+			                <div class="inner">
+			                	<!-- <div class="form-heading">
+			                		<h3>Description</h3>
+			                		<span>2/3</span>
+			                	</div>-->
+								<div class="table-responsive">
+									<table class="table">
+										<tbody>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+			            </section>
+					<!-- SECTION 3 -->
+			            
+			                <div class="inner">
+			                	<!--<div class="form-heading">
+			                		<h4>Steps on how to fill the survey</h4>
+			                		<span>3/3</span>
+			                	</div>-->
+
+			                	<div>
+								
+
+								<div class="inner">
+			                	
+		                		
+								<div>
+	
+								
+								<input id="slider">
+								<script>
+								
+								$('#slider').range2DSlider({
+									grid:true,
+									axis:[[0,2,4,6,8,10],[0,2,4,6,8,10]],
+									projections:true,
+									showLegend:[1,1],
+									allowAxisMove:['both'],
+									printLabel:function( val ){
+										this.projections&&this.projections[0].find('.xdsoft_projection_value_x').text(val[1].toFixed(5));
+										return val[0].toFixed(0);
+									}
+								})
+									.range2DSlider('value',[[9,0],[9,1],[9,2],[9,3],[9,4],[9,5],[9,6],[9,7],[9,8],[9,9]]);
+								
+								
+								</script>
+	
+	
+		<div class="sub-main">
+		<div class="container">
+  			<div class="vertical-center">
+  				<button class="button-three" onclick="capture()"> Submit </button>
+    
+  			</div>
+		</div>	
+	</div>
+		
+	<script>
+		function capture(){
+			var hello=$('#slider').attr('value')
+			console.log(hello);
+			document.getElementById("allval").value = hello;
+		}
+	</script>
+	<input type="hidden" name="Value" id="allval" />
+
+					
+
+							</div>
+			            
+	
+								
+			        
+
+		        	</div>
+
+
+		        </form>
+			</div>
+		</div>
+	</div>
+
+			
+		        
+			 
+			                
+	
+	
+	
+	
+	
+	
+
+
+</body>
+</html>
